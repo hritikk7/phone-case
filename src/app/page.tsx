@@ -100,12 +100,7 @@ export default function Home() {
           </div>
 
 
-          <div className="">
-            <div className="">
-              <img src="/your-image.png" alt="" />
-            </div>
-
-          </div>
+      
         </MaxWidthWrapper>
       </section>
     </div>
