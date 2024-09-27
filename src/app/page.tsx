@@ -1,7 +1,9 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { Check, Star } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
 import Phone from "@/components/Phone";
 import Reviews from "@/components/Reviews";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 export default function Home() {
   return (
     <div className="bg-slate-50 grainy-light">
@@ -241,12 +243,36 @@ export default function Home() {
             </div>
           </div>
 
-          <ul className="my-8 mx-auto w-fit">
-            <li className="flex ">
+          <ul className="my-8 mx-auto w-fit  space-y-3">
+            <li className="w-fit flex gap-2 items-center leading-4 tracking-wide ">
               <Check className="w-5 h-5  stroke-[3px] text-green-600" />
               High Qulaity silicon material
             </li>
-        
+            <li className="w-fit flex gap-2 items-center leading-4 tracking-wide ">
+              <Check className="w-5 h-5  stroke-[3px] text-green-600" />
+              Scratch- and fingerprint resistant coating
+            </li>
+            <li className="w-fit flex gap-2 items-center leading-4 tracking-wide ">
+              <Check className="w-5 h-5  stroke-[3px] text-green-600" />
+              Wireless charging compatible
+            </li>
+            <li className="w-fit flex gap-2 items-center leading-4 tracking-wide ">
+              <Check className="w-5 h-5  stroke-[3px] text-green-600" />5 year
+              print warranty
+            </li>
+
+            <div className="mt-8 ">
+              <Link
+                href="/configure/upload"
+                className={buttonVariants({
+                  size: "lg",
+                  className: "mt-8",
+                })}
+              >
+                Create your case Now
+                <ArrowRight className="h-4 w-4 ml-2" />
+              </Link>
+            </div>
           </ul>
         </MaxWidthWrapper>
       </section>
