@@ -5,15 +5,10 @@ import { ArrowRight } from "lucide-react";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 const NavBar = async () => {
-  const {getUser} = getKindeServerSession()
-  const user = await getUser()
-  const isAdmin = user?.email === process.env.ADMIN_EMAIL
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+  const isAdmin = user?.email === process.env.ADMIN_EMAIL;
 
-  console.log("🚀 ~ NavBar ~ user:", user)
-  
-  console.log(getKindeServerSession());
-
-  
   return (
     <nav
       className=" sticky  top-0  z-[100] h-14 
@@ -75,7 +70,8 @@ const NavBar = async () => {
                   href="/configure/upload"
                   className={buttonVariants({
                     size: "sm",
-                    className: "hidden sm:flex  items-center gap-1 bg-green-600",
+                    className:
+                      "hidden sm:flex  items-center gap-1 bg-green-600",
                   })}
                 >
                   Create Case
