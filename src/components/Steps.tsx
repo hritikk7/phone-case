@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 export const Steps: React.FC = () => {
   const STEPS = [
     {
@@ -19,14 +19,13 @@ export const Steps: React.FC = () => {
     },
   ];
 
-  const pathname = usePathname()
+  const pathname = usePathname();
 
-  return <div className="lg:flex flex-col  rounded-md lg:rounded-none border-none  bg-white lg:border-l lg:border-gray-200  ">
-    {
-      STEPS.map((step, index) =>{
-        RedirectType
-      })
-    }
-
-  </div>;
+  return (
+    <ol className="lg:flex flex-col  rounded-md lg:rounded-none border-none  bg-white lg:border-l lg:border-gray-200  ">
+      {STEPS.map((step, index) => {
+        return <li></li>;
+      })}
+    </ol>
+  );
 };
